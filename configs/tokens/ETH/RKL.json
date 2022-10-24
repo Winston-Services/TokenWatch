@@ -1,0 +1,9 @@
+{
+  "network": "ETH",
+  "name": "Rickle",
+  "symbol": "RKL",
+  "contractAddress": "0x0ff80a1708191c0da8aa600fa487f7ac81d7818c",
+  "isProxy": false,
+  "isTaxToken": false,
+  "isNative": false
+}

@@ -1,0 +1,9 @@
+{
+  "network": "GNOSIS",
+  "name": "Rickle",
+  "symbol": "RKL",
+  "contractAddress": "0x2df5912439d2d14d04a7742346508505288ef367",
+  "isProxy": true,
+  "isTaxToken": false,
+  "isNative": false
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Binance",
+  "symbol": "BNB",
+  "chainId": 56,
+  "rpcUrl": "https://bsc-dataseed1.binance.org/",
+  "explorerUrl": "https://bscscan.com",
+  "explorerAPIKey": null,
+  "apiUrl": "https://api.bscscan.com/api?module=contract&action=getabi&address={CONTRACT_ADDRESS}&apikey={API_KEY}",
+  "apiKey": "",
+  "aggregator": false,
+  "crosschainCapable": false
+}

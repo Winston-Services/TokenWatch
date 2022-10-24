@@ -1,0 +1,10 @@
+{
+  "network": "BNB",
+  "name": "WBNB",
+  "symbol": "WBNB",
+  "decimals": 18,
+  "contractAddress": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+  "isProxy": false,
+  "isTaxToken": false,
+  "isNative": false
+}

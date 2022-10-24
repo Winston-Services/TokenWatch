@@ -1,0 +1,9 @@
+{
+  "network": "BNB",
+  "name": "Winston",
+  "symbol": "WIN",
+  "contractAddress": "0x75578ebbefe274f240b8e1b5859ca34f342157d9",
+  "isProxy": false,
+  "isTaxToken": false,
+  "isNative": false
+}

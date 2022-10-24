@@ -1,0 +1,9 @@
+{
+  "network": "MATIC",
+  "name": "Rickle",
+  "symbol": "RKL",
+  "contractAddress": "0x9fdc23fe295104ac55fef09363c56451d0e37cfa",
+  "isProxy": true,
+  "isTaxToken": false,
+  "isNative": false
+}

@@ -1,0 +1,9 @@
+{
+  "network": "BNB",
+  "name": "Rickle",
+  "symbol": "RKL",
+  "contractAddress": "0xeca15e1bbff172d545dd6325f3bae7b737906737",
+  "isProxy": true,
+  "isTaxToken": false,
+  "isNative": false
+}
