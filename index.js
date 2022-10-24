@@ -175,7 +175,7 @@ function getTokenPrice() {
         [...Object.values(pricingConfig[networkConnection][dexConnection])]
       ];
 
-      for (let n = 0; n <= pairs[0].length; n++) {
+      for (let n = 0; n <= pairs[0].length - 1; n++) {
         const reserves = await router.getTokenPrice(
           tokens[networkConnection].getToken(pairs[0][n]).contractAddress,
           tokens[networkConnection].getToken(pairs[1][n]).contractAddress

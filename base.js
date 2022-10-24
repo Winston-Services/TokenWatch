@@ -7,7 +7,7 @@ const { DexRouterRecord } = require("./utils/DexRouterRecord");
 const { networks } = require("./data/maps/networks");
 const { tokens } = require("./data/maps/tokens");
 const { routers } = require("./data/maps/routers");
-const networkConfigPath = path.resolve("./config/networks");
+const networkConfigPath = path.resolve("./configs/networks");
 const networkConfigFiles = fs
   .readdirSync(networkConfigPath)
   .filter(file => file.endsWith(".json"));
@@ -15,7 +15,8 @@ const networkConfigFiles = fs
 for (const file of networkConfigFiles) {
   const filePath = path.join(networkConfigPath, file);
   const fileContentBuffer = fs.readFileSync(filePath);
-  const config = fileContentBuffer.toJSON();
+  const config = JSON.parse(fileContentBuffer.toString());
+  console.log(config);
   const myTestNetwork = new NetworkRecord(config);
   //GNOSIS https://gnosisscan.io/
   //MATIC https://polygonscan.com/
@@ -25,15 +26,15 @@ for (const file of networkConfigFiles) {
   //add it to our records.
   networks.set(config.symbol, myTestNetwork);
   const networkTokenConfigPath = path.resolve(
-    "./config/tokens/" + config.symbol
+    "./configs/tokens/" + config.symbol
   );
   const networkTokenConfigFiles = fs
     .readdirSync(networkTokenConfigPath)
     .filter(file => file.endsWith(".json"));
   for (const tokenConfigFile of networkTokenConfigFiles) {
-    const filePath = path.join(networkConfigPath, tokenConfigFile);
+    const filePath = path.join(networkTokenConfigPath, tokenConfigFile);
     const fileContentBuffer = fs.readFileSync(filePath);
-    let tokenConfig = fileContentBuffer.toJSON();
+    let tokenConfig = JSON.parse(fileContentBuffer.toString());
     tokenConfig.network = myTestNetwork;
     const token = new TokenRecord(tokenConfig);
     tokens[config.symbol].set(token.symbol, token);
@@ -48,7 +49,6 @@ for (const file of networkConfigFiles) {
     router: "0x10ED43C718714eb63d5aA57B78B54704E256024E",
     version: "V2"
   });
-  
+
   routers["BNB"].set("PancakeSwap", myTestDexRouter);
 }
-

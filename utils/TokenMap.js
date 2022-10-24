@@ -4,7 +4,7 @@ class TokenMap extends Map {
         return this;
     }
 
-    getToken(token) {
+    getToken(token = '') {
         // console.log(this, token);
         let byName = Array.from(this.values()).find(
             e => e.name.toLowerCase() === token.toLowerCase()
