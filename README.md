@@ -29,6 +29,11 @@ This is the basic file structure used for this application.
  |--->networks.js
  |--->routers.js
  |--->tokens.js 
+ |->dist
+ |-->bin
+ |--->winston-token-watch-linux
+ |--->winston-token-watch-macos
+ |--->winston-token-watch-win.exe
  |->utils
  |-->AbiDownloadHandler.js
  |-->DexRouterMap.js
@@ -44,3 +49,24 @@ This is the basic file structure used for this application.
 
 Use this application to help you watch your tokens liquidity.
 
+## Run as a nodejs application
+`npm i`
+Install the node modules.
+`node ./index.js`
+Run the application.
+
+## Manually compile the application.
+`npm i`
+Install the node modules.
+`npm run build`
+
+Create the binary build files.
+
+For Linux Run 
+`./dist/bin/winston-token-watch-linux`
+
+For Macos Run 
+`./dist/bin/winston-token-watch-macos`
+
+For Windows Run 
+`./dist/bin/winston-token-watch-win.exe`
